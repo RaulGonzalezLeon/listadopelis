@@ -69,7 +69,13 @@ open class ActivityWithMenus : AppCompatActivity() {
             R.id.Buscar -> {
 
                 val filtro = findViewById<EditText>(R.id.filtro)
-                filtro.visibility = View.VISIBLE
+
+                if (filtro.visibility == View.INVISIBLE){
+                    filtro.visibility = View.VISIBLE
+                }
+                else{
+                    filtro.visibility = View.INVISIBLE
+                }
 
                  true
             }
